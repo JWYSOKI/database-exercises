@@ -7,8 +7,8 @@ id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 artist VARCHAR(255),
 name VARCHAR(255),
 release_date INT UNSIGNED,
-sales DECIMAL(6,2),
 genre VARCHAR(255),
+sales DECIMAL(6,2),
 PRIMARY KEY (id),
 UNIQUE(name,artist)
 );
