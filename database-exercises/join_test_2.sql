@@ -1,3 +1,5 @@
+# PART 1: Join Example Database
+
 # Create a database named join_test_db
 DROP database if exists join_test_db;
 CREATE database  join_test_db;
@@ -55,4 +57,15 @@ FROM users
   RIGHT JOIN roles ON users.role_id = roles.id;
 
 # Use count and the appropriate join type to get a list of roles along with the number of users that has the role. Hint: You will also need to use group by in the query.
+
+SELECT * from USERS;
+
+SELECT roles.name, COUNT(roles.name)
+FROM users
+  JOIN roles ON users.role_id
+GROUP BY roles.name;
+
+SELECT users.name as user_name, roles.name as role_name
+FROM users
+  JOIN roles ON users.role_id = roles.id;
 
